@@ -12,7 +12,7 @@ namespace askfullname
         {
             string name = "";
             Console.WriteLine("what is your first name?");
-            name += Console.ReadLine();
+            Console.ReadLine();
             Console.WriteLine("what is your last name?");
             name += " " + Console.ReadLine();
             Console.WriteLine("hello "+name+"!");
