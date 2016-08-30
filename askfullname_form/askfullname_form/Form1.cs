@@ -34,7 +34,13 @@ namespace askfullname_form
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hello " + textBox1.Text + " " + textBox2.Text, "Message box", MessageBoxButtons.OKCancel);
+            if(textBox1.Text != "" && textBox2.Text != "")
+            { 
+                MessageBox.Show("Hello " + textBox1.Text + " " + textBox2.Text, "Message box", MessageBoxButtons.OKCancel);
+            }else
+            {
+                MessageBox.Show("please enter your first and last name in the text boxes");
+            }
         }
     }
 }
