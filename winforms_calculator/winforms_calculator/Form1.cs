@@ -25,22 +25,22 @@ namespace winforms_calculator
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show((int.Parse(textBox1.Text) + int.Parse(textBox2.Text)).ToString(),"Answer", MessageBoxButtons.OKCancel);
+            listBox1.Items.Add(string.Format("{0} + {1} = {2}", textBox1.Text, textBox2.Text, (int.Parse(textBox1.Text) + int.Parse(textBox2.Text)).ToString()));
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show((int.Parse(textBox1.Text) - int.Parse(textBox2.Text)).ToString(), "Answer", MessageBoxButtons.OKCancel);
+            listBox1.Items.Add(string.Format("{0} - {1} = {2}", textBox1.Text, textBox2.Text, (int.Parse(textBox1.Text) - int.Parse(textBox2.Text)).ToString()));
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show((int.Parse(textBox1.Text) * int.Parse(textBox2.Text)).ToString(), "Answer", MessageBoxButtons.OKCancel);
+            listBox1.Items.Add(string.Format("{0} * {1} = {2}", textBox1.Text, textBox2.Text, (int.Parse(textBox1.Text) * int.Parse(textBox2.Text)).ToString()));
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            MessageBox.Show((int.Parse(textBox1.Text) / int.Parse(textBox2.Text)).ToString(), "Answer", MessageBoxButtons.OKCancel);
+            listBox1.Items.Add(string.Format("{0} / {1} = {2}", textBox1.Text, textBox2.Text, (int.Parse(textBox1.Text) / int.Parse(textBox2.Text)).ToString()));
         }
     }
 }
