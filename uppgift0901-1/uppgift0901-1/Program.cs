@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -56,6 +57,33 @@ namespace uppgift0901_1
             }
             Console.WriteLine(upr_n_lwr_chars_name);
             Console.WriteLine(name.Replace('e', '3').Replace('a', '4').Replace('l', '1').Replace('t', '7'));
+            Dictionary<char, int> characters = new Dictionary<char, int>();
+            string nospace_name = name.Replace(" ", "");
+            foreach (char chr in nospace_name)
+            {
+                if (characters.ContainsKey(chr))
+                {
+                    characters[chr] += 1;
+                }
+                else
+                {
+                    characters.Add(chr, 1);
+                }
+            }
+            foreach (char key in characters.Keys)
+            {
+                Console.WriteLine(string.Format("{0}={1}",key.ToString(),characters[key].ToString()));
+            }
+            foreach (char key in characters.Keys)
+            {
+                Console.WriteLine(key);
+            }
+            char[] test = characters.Keys.ToArray();
+            Array.Sort(test);
+            foreach (char key in test)
+            {
+                Console.WriteLine(key);
+            }
         }
     }
 }
