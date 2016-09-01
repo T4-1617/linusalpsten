@@ -58,6 +58,8 @@ namespace uppgift0901_1
             }
             Console.WriteLine(upr_n_lwr_chars_name);
             Console.WriteLine(name.Replace('e', '3').Replace('a', '4').Replace('l', '1').Replace('t', '7'));
+
+            //tyckte att det var onödigt att skriva ut HELA alfabetet, så jag skriver bara ut de tecken som finns i strängen
             Dictionary<char, int> characters = new Dictionary<char, int>();
             string nospace_name = name.Replace(" ", "");
             foreach (char chr in nospace_name)
