@@ -12,7 +12,8 @@ namespace uppgift0901_1
         static void Main(string[] args)
         {
             Console.WriteLine("ange förnamn och efternamn");
-            string name = Console.ReadLine();
+            string[] input = Console.ReadLine().Split(' ');
+            string name = input[0] + " " + input[input.Length - 1];
             Console.WriteLine(name.Length.ToString());
             Console.WriteLine(name.Replace(" ",string.Empty).Length.ToString());
             string[] name_array = name.Split(' ');
