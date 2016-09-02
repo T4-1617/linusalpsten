@@ -29,14 +29,14 @@ namespace battleships_console_app
             while (ships_left > 0) // så länge det finns skepp kvar
             {
                 Console.WriteLine("{0} skepp kvar", amount_of_ships);
-                if (shoot()) // om det är en träff
+                if (shoot(x.Next(0, 7), y.Next(0, 5))) // om det är en träff
                 {
-                    amount_of_ships--; //"sänk" ett skepp
+                    ships_left--; //"sänk" ett skepp
                 }
                 shoot_attempts++;
             }
             Console.WriteLine("Inga skepp kvar");
-            Console.WriteLine("Score: {0} (högre är bättre)",(100*Math.Exp(0.1*(-shoot_attempts+amount_of_ships)))); //det bästa man kan få är 100 poäng
+            Console.WriteLine("Score: {0} (högre är bättre), {1} attempts",(100*Math.Exp(0.1*(-shoot_attempts+amount_of_ships))),shoot_attempts); //det bästa man kan få är 100 poäng
         }
 
 
@@ -65,12 +65,15 @@ namespace battleships_console_app
         }
 
 
-        private static bool shoot()
+        private static bool shoot(int x, int y)
         {
-            Console.WriteLine("Ange en {0}-kordinat mellan från 0 till {1} som du vill skuta på", 'x', 6);
-            int xc = get_valit_coordinate_from_user(7, 'x'); //hämtar en giltig x kordinat
-            Console.WriteLine("Ange en {0}-kordinat mellan från 0 till {1} som du vill skuta på", 'y', 4);
-            int yc = get_valit_coordinate_from_user(5, 'y'); //hämtar en giltig y kordinat
+            //Console.WriteLine("Ange en {0}-kordinat mellan från 0 till {1} som du vill skuta på", 'x', 6);
+            //int xc = get_valit_coordinate_from_user(7, 'x'); //hämtar en giltig x kordinat
+            //Console.WriteLine("Ange en {0}-kordinat mellan från 0 till {1} som du vill skuta på", 'y', 4);
+            //int yc = get_valit_coordinate_from_user(5, 'y'); //hämtar en giltig y kordinat
+
+            int xc = x;
+            int yc = y;
 
             if (GameField[yc, xc]) // om det finns ett skepp vid kordinaterna
             {
