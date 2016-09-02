@@ -10,7 +10,9 @@ namespace ConsoleTestApplication
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("hello hello");
+            int dec = 11;
+            Console.WriteLine(Convert.ToString(dec,2));
+            bool[,] test = new bool[6, 4]; 
         }
     }
 }
