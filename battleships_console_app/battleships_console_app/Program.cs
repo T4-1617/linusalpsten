@@ -25,7 +25,8 @@ namespace battleships_console_app
                     success = place_ship(y.Next(0, 5), x.Next(0, 7)); // försök igen
                 }
             }
-            while (amount_of_ships > 0) // så länge det finns skepp kvar
+            int ships_left = amount_of_ships;
+            while (ships_left > 0) // så länge det finns skepp kvar
             {
                 Console.WriteLine("{0} skepp kvar", amount_of_ships);
                 if (shoot()) // om det är en träff
@@ -35,7 +36,7 @@ namespace battleships_console_app
                 shoot_attempts++;
             }
             Console.WriteLine("Inga skepp kvar");
-            Console.WriteLine("Score: {0} (lägre är bättre)",shoot_attempts);
+            Console.WriteLine("Score: {0} (högre är bättre)",(100*Math.Exp(0.1*(-shoot_attempts+amount_of_ships)))); //det bästa man kan få är 100 poäng
         }
 
 
@@ -70,6 +71,7 @@ namespace battleships_console_app
             int xc = get_valit_coordinate_from_user(7, 'x'); //hämtar en giltig x kordinat
             Console.WriteLine("Ange en {0}-kordinat mellan från 0 till {1} som du vill skuta på", 'y', 4);
             int yc = get_valit_coordinate_from_user(5, 'y'); //hämtar en giltig y kordinat
+
             if (GameField[yc, xc]) // om det finns ett skepp vid kordinaterna
             {
                 Console.WriteLine("Träff vid {0}, {1}", xc, yc);
