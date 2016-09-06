@@ -27,25 +27,46 @@ namespace Deluppgift1_36
         {
             for (int i = 0; i < 13; i++)
             {
-                deck[i] = new Card("Heart", i + 1);
+                deck[i] = new Card("Hearts", i + 1);
             }
             for (int i = 0; i < 13; i++)
             {
-                deck[i+13] = new Card("Diamond", i + 1);
+                deck[i+13] = new Card("Diamonds", i + 1);
             }
             for (int i = 0; i < 13; i++)
             {
-                deck[i+26] = new Card("Spade", i + 1);
+                deck[i+26] = new Card("Spades", i + 1);
             }
             for (int i = 0; i < 13; i++)
             {
-                deck[i+39] = new Card("Clove", i + 1);
+                deck[i+39] = new Card("Cloves", i + 1);
             }
-            Card current;
-            while (cards_in_deck > 1)
+            Card current_card;
+            while (cards_in_deck > 0)
             {
-                current = takeCard();
-                Console.WriteLine(current.shape+current.value.ToString());
+                Console.WriteLine("Press ENTER for a card");
+                Console.ReadLine();
+                current_card = takeCard();
+                string cvalue;
+                switch (current_card.value)
+                {
+                    case 1:
+                        cvalue = "Ace";
+                        break;
+                    case 11:
+                        cvalue = "Jack";
+                        break;
+                    case 12:
+                        cvalue = "Queen";
+                        break;
+                    case 13:
+                        cvalue = "King";
+                        break;
+                    default:
+                        cvalue = current_card.value.ToString();
+                        break;
+                }
+                Console.WriteLine("Your card is {1} of {0}", current_card.shape, cvalue);
             }
         }
         private static Card takeCard()
