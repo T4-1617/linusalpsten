@@ -43,6 +43,7 @@ namespace Deluppgift1_36
             }
             Card current_card;
             int card_counter = 0;
+            int sum = 0;
             while (cards_in_deck > 0)
             {
                 Console.WriteLine("Press ENTER for a card");
@@ -67,8 +68,10 @@ namespace Deluppgift1_36
                         cvalue = current_card.value.ToString();
                         break;
                 }
+                sum += current_card.value;
                 card_counter++;
                 Console.WriteLine("Your card nr {2} is {1} of {0} and there is {3} cards left", current_card.shape, cvalue, card_counter, 52-card_counter);
+                Console.WriteLine("Your current score is {0}", sum);
             }
         }
         private static Card takeCard()
