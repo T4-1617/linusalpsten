@@ -42,6 +42,7 @@ namespace Deluppgift1_36
                 deck[i+39] = new Card("Cloves", i + 1);
             }
             Card current_card;
+            int card_counter = 0;
             while (cards_in_deck > 0)
             {
                 Console.WriteLine("Press ENTER for a card");
@@ -66,7 +67,8 @@ namespace Deluppgift1_36
                         cvalue = current_card.value.ToString();
                         break;
                 }
-                Console.WriteLine("Your card is {1} of {0}", current_card.shape, cvalue);
+                card_counter++;
+                Console.WriteLine("Your card nr {2} is {1} of {0} and there is {3} cards left", current_card.shape, cvalue, card_counter, 52-card_counter);
             }
         }
         private static Card takeCard()
