@@ -36,6 +36,17 @@ namespace Deluppgift2_v36_Blackjack
                     default:
                         break;
                 }
+
+                if (current_score == 21)
+                {
+                    Console.WriteLine("Blackjack, Congratulations you won!");
+                    return;
+                }
+                else if (current_score > 21)
+                {
+                    Console.WriteLine("You lost, try again");
+                    current_score = 0;
+                }
             }
 
             Console.WriteLine("There are no cards left in the deck");
