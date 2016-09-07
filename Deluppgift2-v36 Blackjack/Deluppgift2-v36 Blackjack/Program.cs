@@ -18,11 +18,27 @@ namespace Deluppgift2_v36_Blackjack
             create_deck(2);
             empty.is_a_card = false;
             Card players_card = empty;
-            for (int i = 0; i < deck.Length; i++)
+            int current_score = 0;
+            while (cards_left > 0)
             {
-                players_card = take_random_card();
-                Console.WriteLine(players_card.shape+players_card.value.ToString());
+                Console.WriteLine("Do you want a card (Y/N)?");
+                switch (Console.ReadLine().ToUpper())
+                {
+                    case "Y":
+                        players_card = take_random_card();
+                        current_score += players_card.value;
+                        Console.WriteLine("Your card is {0} of {1} and your score is {2}", players_card.value, players_card.shape, current_score);
+                        break;
+                    case "N":
+                        current_score = 0;
+                        Console.WriteLine("Your score has been reset to 0");
+                        break;
+                    default:
+                        break;
+                }
             }
+
+            Console.WriteLine("There are no cards left in the deck");
         }
         class Card
         {
