@@ -30,24 +30,24 @@
         {
             this.registerLabel = new System.Windows.Forms.Label();
             this.registrationChoices = new System.Windows.Forms.ComboBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.firstNameLabel = new System.Windows.Forms.Label();
-            this.firstNameTBox = new System.Windows.Forms.TextBox();
-            this.lastNameTBox = new System.Windows.Forms.TextBox();
-            this.lastNameLabel = new System.Windows.Forms.Label();
-            this.phoneNrTBox = new System.Windows.Forms.TextBox();
-            this.phoneNrLabel = new System.Windows.Forms.Label();
-            this.dynamicTBox = new System.Windows.Forms.TextBox();
-            this.dynamicLabel = new System.Windows.Forms.Label();
-            this.salaryTBox = new System.Windows.Forms.TextBox();
-            this.salaryLabel = new System.Windows.Forms.Label();
+            this.regPanel = new System.Windows.Forms.Panel();
+            this.regCancelButton = new System.Windows.Forms.Button();
+            this.regSaveButton = new System.Windows.Forms.Button();
             this.titleTBox = new System.Windows.Forms.TextBox();
             this.titleLabel = new System.Windows.Forms.Label();
-            this.regSaveButton = new System.Windows.Forms.Button();
-            this.regCancelButton = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.salaryTBox = new System.Windows.Forms.TextBox();
+            this.salaryLabel = new System.Windows.Forms.Label();
+            this.dynamicTBox = new System.Windows.Forms.TextBox();
+            this.dynamicLabel = new System.Windows.Forms.Label();
+            this.phoneNrTBox = new System.Windows.Forms.TextBox();
+            this.phoneNrLabel = new System.Windows.Forms.Label();
+            this.lastNameTBox = new System.Windows.Forms.TextBox();
+            this.lastNameLabel = new System.Windows.Forms.Label();
+            this.firstNameTBox = new System.Windows.Forms.TextBox();
+            this.firstNameLabel = new System.Windows.Forms.Label();
+            this.personListBox = new System.Windows.Forms.ListBox();
             this.regAmountLabel = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.regPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // registerLabel
@@ -67,74 +67,78 @@
             this.registrationChoices.Size = new System.Drawing.Size(426, 21);
             this.registrationChoices.TabIndex = 1;
             // 
-            // panel1
+            // regPanel
             // 
-            this.panel1.Controls.Add(this.regCancelButton);
-            this.panel1.Controls.Add(this.regSaveButton);
-            this.panel1.Controls.Add(this.titleTBox);
-            this.panel1.Controls.Add(this.titleLabel);
-            this.panel1.Controls.Add(this.salaryTBox);
-            this.panel1.Controls.Add(this.salaryLabel);
-            this.panel1.Controls.Add(this.dynamicTBox);
-            this.panel1.Controls.Add(this.dynamicLabel);
-            this.panel1.Controls.Add(this.phoneNrTBox);
-            this.panel1.Controls.Add(this.phoneNrLabel);
-            this.panel1.Controls.Add(this.lastNameTBox);
-            this.panel1.Controls.Add(this.lastNameLabel);
-            this.panel1.Controls.Add(this.firstNameTBox);
-            this.panel1.Controls.Add(this.firstNameLabel);
-            this.panel1.Location = new System.Drawing.Point(87, 93);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(565, 241);
-            this.panel1.TabIndex = 2;
+            this.regPanel.Controls.Add(this.regCancelButton);
+            this.regPanel.Controls.Add(this.regSaveButton);
+            this.regPanel.Controls.Add(this.titleTBox);
+            this.regPanel.Controls.Add(this.titleLabel);
+            this.regPanel.Controls.Add(this.salaryTBox);
+            this.regPanel.Controls.Add(this.salaryLabel);
+            this.regPanel.Controls.Add(this.dynamicTBox);
+            this.regPanel.Controls.Add(this.dynamicLabel);
+            this.regPanel.Controls.Add(this.phoneNrTBox);
+            this.regPanel.Controls.Add(this.phoneNrLabel);
+            this.regPanel.Controls.Add(this.lastNameTBox);
+            this.regPanel.Controls.Add(this.lastNameLabel);
+            this.regPanel.Controls.Add(this.firstNameTBox);
+            this.regPanel.Controls.Add(this.firstNameLabel);
+            this.regPanel.Location = new System.Drawing.Point(87, 93);
+            this.regPanel.Name = "regPanel";
+            this.regPanel.Size = new System.Drawing.Size(565, 241);
+            this.regPanel.TabIndex = 2;
             // 
-            // firstNameLabel
+            // regCancelButton
             // 
-            this.firstNameLabel.AutoSize = true;
-            this.firstNameLabel.Location = new System.Drawing.Point(18, 22);
-            this.firstNameLabel.Name = "firstNameLabel";
-            this.firstNameLabel.Size = new System.Drawing.Size(55, 13);
-            this.firstNameLabel.TabIndex = 0;
-            this.firstNameLabel.Text = "First name";
+            this.regCancelButton.Location = new System.Drawing.Point(409, 195);
+            this.regCancelButton.Name = "regCancelButton";
+            this.regCancelButton.Size = new System.Drawing.Size(75, 23);
+            this.regCancelButton.TabIndex = 13;
+            this.regCancelButton.Text = "Cancel";
+            this.regCancelButton.UseVisualStyleBackColor = true;
+            this.regCancelButton.Click += new System.EventHandler(this.regCancelButton_Click);
             // 
-            // firstNameTBox
+            // regSaveButton
             // 
-            this.firstNameTBox.Location = new System.Drawing.Point(139, 22);
-            this.firstNameTBox.Name = "firstNameTBox";
-            this.firstNameTBox.Size = new System.Drawing.Size(407, 20);
-            this.firstNameTBox.TabIndex = 1;
+            this.regSaveButton.Location = new System.Drawing.Point(309, 196);
+            this.regSaveButton.Name = "regSaveButton";
+            this.regSaveButton.Size = new System.Drawing.Size(75, 23);
+            this.regSaveButton.TabIndex = 12;
+            this.regSaveButton.Text = "Save";
+            this.regSaveButton.UseVisualStyleBackColor = true;
+            this.regSaveButton.Click += new System.EventHandler(this.regSaveButton_Click);
             // 
-            // lastNameTBox
+            // titleTBox
             // 
-            this.lastNameTBox.Location = new System.Drawing.Point(139, 48);
-            this.lastNameTBox.Name = "lastNameTBox";
-            this.lastNameTBox.Size = new System.Drawing.Size(407, 20);
-            this.lastNameTBox.TabIndex = 3;
+            this.titleTBox.Location = new System.Drawing.Point(139, 152);
+            this.titleTBox.Name = "titleTBox";
+            this.titleTBox.Size = new System.Drawing.Size(407, 20);
+            this.titleTBox.TabIndex = 11;
             // 
-            // lastNameLabel
+            // titleLabel
             // 
-            this.lastNameLabel.AutoSize = true;
-            this.lastNameLabel.Location = new System.Drawing.Point(18, 48);
-            this.lastNameLabel.Name = "lastNameLabel";
-            this.lastNameLabel.Size = new System.Drawing.Size(56, 13);
-            this.lastNameLabel.TabIndex = 2;
-            this.lastNameLabel.Text = "Last name";
+            this.titleLabel.AutoSize = true;
+            this.titleLabel.Location = new System.Drawing.Point(18, 152);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(30, 13);
+            this.titleLabel.TabIndex = 10;
+            this.titleLabel.Text = "Title:";
             // 
-            // phoneNrTBox
+            // salaryTBox
             // 
-            this.phoneNrTBox.Location = new System.Drawing.Point(139, 74);
-            this.phoneNrTBox.Name = "phoneNrTBox";
-            this.phoneNrTBox.Size = new System.Drawing.Size(407, 20);
-            this.phoneNrTBox.TabIndex = 5;
+            this.salaryTBox.Location = new System.Drawing.Point(139, 126);
+            this.salaryTBox.Name = "salaryTBox";
+            this.salaryTBox.Size = new System.Drawing.Size(407, 20);
+            this.salaryTBox.TabIndex = 9;
             // 
-            // phoneNrLabel
+            // salaryLabel
             // 
-            this.phoneNrLabel.AutoSize = true;
-            this.phoneNrLabel.Location = new System.Drawing.Point(18, 74);
-            this.phoneNrLabel.Name = "phoneNrLabel";
-            this.phoneNrLabel.Size = new System.Drawing.Size(76, 13);
-            this.phoneNrLabel.TabIndex = 4;
-            this.phoneNrLabel.Text = "Phone number";
+            this.salaryLabel.AutoSize = true;
+            this.salaryLabel.Location = new System.Drawing.Point(18, 126);
+            this.salaryLabel.Name = "salaryLabel";
+            this.salaryLabel.Size = new System.Drawing.Size(39, 13);
+            this.salaryLabel.TabIndex = 8;
+            this.salaryLabel.Text = "Salary:";
             // 
             // dynamicTBox
             // 
@@ -152,63 +156,61 @@
             this.dynamicLabel.TabIndex = 6;
             this.dynamicLabel.Text = "dynamic";
             // 
-            // salaryTBox
+            // phoneNrTBox
             // 
-            this.salaryTBox.Location = new System.Drawing.Point(139, 126);
-            this.salaryTBox.Name = "salaryTBox";
-            this.salaryTBox.Size = new System.Drawing.Size(407, 20);
-            this.salaryTBox.TabIndex = 9;
+            this.phoneNrTBox.Location = new System.Drawing.Point(139, 74);
+            this.phoneNrTBox.Name = "phoneNrTBox";
+            this.phoneNrTBox.Size = new System.Drawing.Size(407, 20);
+            this.phoneNrTBox.TabIndex = 5;
             // 
-            // salaryLabel
+            // phoneNrLabel
             // 
-            this.salaryLabel.AutoSize = true;
-            this.salaryLabel.Location = new System.Drawing.Point(18, 126);
-            this.salaryLabel.Name = "salaryLabel";
-            this.salaryLabel.Size = new System.Drawing.Size(36, 13);
-            this.salaryLabel.TabIndex = 8;
-            this.salaryLabel.Text = "Salary";
+            this.phoneNrLabel.AutoSize = true;
+            this.phoneNrLabel.Location = new System.Drawing.Point(18, 74);
+            this.phoneNrLabel.Name = "phoneNrLabel";
+            this.phoneNrLabel.Size = new System.Drawing.Size(79, 13);
+            this.phoneNrLabel.TabIndex = 4;
+            this.phoneNrLabel.Text = "Phone number:";
             // 
-            // titleTBox
+            // lastNameTBox
             // 
-            this.titleTBox.Location = new System.Drawing.Point(139, 152);
-            this.titleTBox.Name = "titleTBox";
-            this.titleTBox.Size = new System.Drawing.Size(407, 20);
-            this.titleTBox.TabIndex = 11;
+            this.lastNameTBox.Location = new System.Drawing.Point(139, 48);
+            this.lastNameTBox.Name = "lastNameTBox";
+            this.lastNameTBox.Size = new System.Drawing.Size(407, 20);
+            this.lastNameTBox.TabIndex = 3;
             // 
-            // titleLabel
+            // lastNameLabel
             // 
-            this.titleLabel.AutoSize = true;
-            this.titleLabel.Location = new System.Drawing.Point(18, 152);
-            this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(27, 13);
-            this.titleLabel.TabIndex = 10;
-            this.titleLabel.Text = "Title";
+            this.lastNameLabel.AutoSize = true;
+            this.lastNameLabel.Location = new System.Drawing.Point(18, 48);
+            this.lastNameLabel.Name = "lastNameLabel";
+            this.lastNameLabel.Size = new System.Drawing.Size(59, 13);
+            this.lastNameLabel.TabIndex = 2;
+            this.lastNameLabel.Text = "Last name:";
             // 
-            // regSaveButton
+            // firstNameTBox
             // 
-            this.regSaveButton.Location = new System.Drawing.Point(309, 196);
-            this.regSaveButton.Name = "regSaveButton";
-            this.regSaveButton.Size = new System.Drawing.Size(75, 23);
-            this.regSaveButton.TabIndex = 12;
-            this.regSaveButton.Text = "Save";
-            this.regSaveButton.UseVisualStyleBackColor = true;
+            this.firstNameTBox.Location = new System.Drawing.Point(139, 22);
+            this.firstNameTBox.Name = "firstNameTBox";
+            this.firstNameTBox.Size = new System.Drawing.Size(407, 20);
+            this.firstNameTBox.TabIndex = 1;
             // 
-            // regCancelButton
+            // firstNameLabel
             // 
-            this.regCancelButton.Location = new System.Drawing.Point(409, 195);
-            this.regCancelButton.Name = "regCancelButton";
-            this.regCancelButton.Size = new System.Drawing.Size(75, 23);
-            this.regCancelButton.TabIndex = 13;
-            this.regCancelButton.Text = "Cancel";
-            this.regCancelButton.UseVisualStyleBackColor = true;
+            this.firstNameLabel.AutoSize = true;
+            this.firstNameLabel.Location = new System.Drawing.Point(18, 22);
+            this.firstNameLabel.Name = "firstNameLabel";
+            this.firstNameLabel.Size = new System.Drawing.Size(58, 13);
+            this.firstNameLabel.TabIndex = 0;
+            this.firstNameLabel.Text = "First name:";
             // 
-            // listBox1
+            // personListBox
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(87, 425);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(143, 264);
-            this.listBox1.TabIndex = 3;
+            this.personListBox.FormattingEnabled = true;
+            this.personListBox.Location = new System.Drawing.Point(87, 425);
+            this.personListBox.Name = "personListBox";
+            this.personListBox.Size = new System.Drawing.Size(143, 264);
+            this.personListBox.TabIndex = 3;
             // 
             // regAmountLabel
             // 
@@ -225,14 +227,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(768, 759);
             this.Controls.Add(this.regAmountLabel);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.personListBox);
+            this.Controls.Add(this.regPanel);
             this.Controls.Add(this.registrationChoices);
             this.Controls.Add(this.registerLabel);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.regPanel.ResumeLayout(false);
+            this.regPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,7 +244,7 @@
 
         private System.Windows.Forms.Label registerLabel;
         private System.Windows.Forms.ComboBox registrationChoices;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel regPanel;
         private System.Windows.Forms.TextBox titleTBox;
         private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.TextBox salaryTBox;
@@ -257,7 +259,7 @@
         private System.Windows.Forms.Label firstNameLabel;
         private System.Windows.Forms.Button regCancelButton;
         private System.Windows.Forms.Button regSaveButton;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox personListBox;
         private System.Windows.Forms.Label regAmountLabel;
     }
 }
