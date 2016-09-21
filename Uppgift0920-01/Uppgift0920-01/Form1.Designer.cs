@@ -47,7 +47,23 @@
             this.firstNameLabel = new System.Windows.Forms.Label();
             this.personListBox = new System.Windows.Forms.ListBox();
             this.regAmountLabel = new System.Windows.Forms.Label();
+            this.editPanel = new System.Windows.Forms.Panel();
+            this.editTitleLabel = new System.Windows.Forms.Label();
+            this.editSalaryLabel = new System.Windows.Forms.Label();
+            this.editDynamicLabel = new System.Windows.Forms.Label();
+            this.editPhoneNrLabel = new System.Windows.Forms.Label();
+            this.editLastNameLabel = new System.Windows.Forms.Label();
+            this.editFirstNameLabel = new System.Windows.Forms.Label();
+            this.editTitleTBox = new System.Windows.Forms.TextBox();
+            this.editSalaryTBox = new System.Windows.Forms.TextBox();
+            this.editDynamicTBox = new System.Windows.Forms.TextBox();
+            this.editPhoneNrTBox = new System.Windows.Forms.TextBox();
+            this.editLastNameTBox = new System.Windows.Forms.TextBox();
+            this.editFirstNameTBox = new System.Windows.Forms.TextBox();
+            this.editCancelButton = new System.Windows.Forms.Button();
+            this.editSaveButton = new System.Windows.Forms.Button();
             this.regPanel.SuspendLayout();
+            this.editPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // registerLabel
@@ -221,11 +237,149 @@
             this.regAmountLabel.TabIndex = 4;
             this.regAmountLabel.Text = "label1";
             // 
+            // editPanel
+            // 
+            this.editPanel.Controls.Add(this.editTitleLabel);
+            this.editPanel.Controls.Add(this.editSalaryLabel);
+            this.editPanel.Controls.Add(this.editDynamicLabel);
+            this.editPanel.Controls.Add(this.editPhoneNrLabel);
+            this.editPanel.Controls.Add(this.editLastNameLabel);
+            this.editPanel.Controls.Add(this.editFirstNameLabel);
+            this.editPanel.Controls.Add(this.editTitleTBox);
+            this.editPanel.Controls.Add(this.editSalaryTBox);
+            this.editPanel.Controls.Add(this.editDynamicTBox);
+            this.editPanel.Controls.Add(this.editPhoneNrTBox);
+            this.editPanel.Controls.Add(this.editLastNameTBox);
+            this.editPanel.Controls.Add(this.editFirstNameTBox);
+            this.editPanel.Controls.Add(this.editCancelButton);
+            this.editPanel.Controls.Add(this.editSaveButton);
+            this.editPanel.Location = new System.Drawing.Point(371, 425);
+            this.editPanel.Name = "editPanel";
+            this.editPanel.Size = new System.Drawing.Size(281, 264);
+            this.editPanel.TabIndex = 5;
+            // 
+            // editTitleLabel
+            // 
+            this.editTitleLabel.AutoSize = true;
+            this.editTitleLabel.Location = new System.Drawing.Point(4, 137);
+            this.editTitleLabel.Name = "editTitleLabel";
+            this.editTitleLabel.Size = new System.Drawing.Size(30, 13);
+            this.editTitleLabel.TabIndex = 13;
+            this.editTitleLabel.Text = "Title:";
+            // 
+            // editSalaryLabel
+            // 
+            this.editSalaryLabel.AutoSize = true;
+            this.editSalaryLabel.Location = new System.Drawing.Point(4, 111);
+            this.editSalaryLabel.Name = "editSalaryLabel";
+            this.editSalaryLabel.Size = new System.Drawing.Size(39, 13);
+            this.editSalaryLabel.TabIndex = 12;
+            this.editSalaryLabel.Text = "Salary:";
+            // 
+            // editDynamicLabel
+            // 
+            this.editDynamicLabel.AutoSize = true;
+            this.editDynamicLabel.Location = new System.Drawing.Point(4, 85);
+            this.editDynamicLabel.Name = "editDynamicLabel";
+            this.editDynamicLabel.Size = new System.Drawing.Size(46, 13);
+            this.editDynamicLabel.TabIndex = 11;
+            this.editDynamicLabel.Text = "dynamic";
+            // 
+            // editPhoneNrLabel
+            // 
+            this.editPhoneNrLabel.AutoSize = true;
+            this.editPhoneNrLabel.Location = new System.Drawing.Point(4, 59);
+            this.editPhoneNrLabel.Name = "editPhoneNrLabel";
+            this.editPhoneNrLabel.Size = new System.Drawing.Size(79, 13);
+            this.editPhoneNrLabel.TabIndex = 10;
+            this.editPhoneNrLabel.Text = "Phone number:";
+            // 
+            // editLastNameLabel
+            // 
+            this.editLastNameLabel.AutoSize = true;
+            this.editLastNameLabel.Location = new System.Drawing.Point(3, 33);
+            this.editLastNameLabel.Name = "editLastNameLabel";
+            this.editLastNameLabel.Size = new System.Drawing.Size(59, 13);
+            this.editLastNameLabel.TabIndex = 9;
+            this.editLastNameLabel.Text = "Last name:";
+            // 
+            // editFirstNameLabel
+            // 
+            this.editFirstNameLabel.AutoSize = true;
+            this.editFirstNameLabel.Location = new System.Drawing.Point(4, 7);
+            this.editFirstNameLabel.Name = "editFirstNameLabel";
+            this.editFirstNameLabel.Size = new System.Drawing.Size(58, 13);
+            this.editFirstNameLabel.TabIndex = 8;
+            this.editFirstNameLabel.Text = "First name:";
+            // 
+            // editTitleTBox
+            // 
+            this.editTitleTBox.Location = new System.Drawing.Point(178, 134);
+            this.editTitleTBox.Name = "editTitleTBox";
+            this.editTitleTBox.Size = new System.Drawing.Size(100, 20);
+            this.editTitleTBox.TabIndex = 7;
+            // 
+            // editSalaryTBox
+            // 
+            this.editSalaryTBox.Location = new System.Drawing.Point(178, 108);
+            this.editSalaryTBox.Name = "editSalaryTBox";
+            this.editSalaryTBox.Size = new System.Drawing.Size(100, 20);
+            this.editSalaryTBox.TabIndex = 6;
+            // 
+            // editDynamicTBox
+            // 
+            this.editDynamicTBox.Location = new System.Drawing.Point(178, 82);
+            this.editDynamicTBox.Name = "editDynamicTBox";
+            this.editDynamicTBox.Size = new System.Drawing.Size(100, 20);
+            this.editDynamicTBox.TabIndex = 5;
+            // 
+            // editPhoneNrTBox
+            // 
+            this.editPhoneNrTBox.Location = new System.Drawing.Point(178, 56);
+            this.editPhoneNrTBox.Name = "editPhoneNrTBox";
+            this.editPhoneNrTBox.Size = new System.Drawing.Size(100, 20);
+            this.editPhoneNrTBox.TabIndex = 4;
+            // 
+            // editLastNameTBox
+            // 
+            this.editLastNameTBox.Location = new System.Drawing.Point(178, 30);
+            this.editLastNameTBox.Name = "editLastNameTBox";
+            this.editLastNameTBox.Size = new System.Drawing.Size(100, 20);
+            this.editLastNameTBox.TabIndex = 3;
+            // 
+            // editFirstNameTBox
+            // 
+            this.editFirstNameTBox.Location = new System.Drawing.Point(178, 4);
+            this.editFirstNameTBox.Name = "editFirstNameTBox";
+            this.editFirstNameTBox.Size = new System.Drawing.Size(100, 20);
+            this.editFirstNameTBox.TabIndex = 2;
+            // 
+            // editCancelButton
+            // 
+            this.editCancelButton.Location = new System.Drawing.Point(190, 229);
+            this.editCancelButton.Name = "editCancelButton";
+            this.editCancelButton.Size = new System.Drawing.Size(75, 23);
+            this.editCancelButton.TabIndex = 1;
+            this.editCancelButton.Text = "Cancel";
+            this.editCancelButton.UseVisualStyleBackColor = true;
+            this.editCancelButton.Click += new System.EventHandler(this.editCancelButton_Click);
+            // 
+            // editSaveButton
+            // 
+            this.editSaveButton.Location = new System.Drawing.Point(109, 229);
+            this.editSaveButton.Name = "editSaveButton";
+            this.editSaveButton.Size = new System.Drawing.Size(75, 23);
+            this.editSaveButton.TabIndex = 0;
+            this.editSaveButton.Text = "Save";
+            this.editSaveButton.UseVisualStyleBackColor = true;
+            this.editSaveButton.Click += new System.EventHandler(this.editSaveButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(768, 759);
+            this.Controls.Add(this.editPanel);
             this.Controls.Add(this.regAmountLabel);
             this.Controls.Add(this.personListBox);
             this.Controls.Add(this.regPanel);
@@ -235,6 +389,8 @@
             this.Text = "Form1";
             this.regPanel.ResumeLayout(false);
             this.regPanel.PerformLayout();
+            this.editPanel.ResumeLayout(false);
+            this.editPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,6 +417,21 @@
         private System.Windows.Forms.Button regSaveButton;
         private System.Windows.Forms.ListBox personListBox;
         private System.Windows.Forms.Label regAmountLabel;
+        private System.Windows.Forms.Panel editPanel;
+        private System.Windows.Forms.Label editTitleLabel;
+        private System.Windows.Forms.Label editSalaryLabel;
+        private System.Windows.Forms.Label editDynamicLabel;
+        private System.Windows.Forms.Label editPhoneNrLabel;
+        private System.Windows.Forms.Label editLastNameLabel;
+        private System.Windows.Forms.Label editFirstNameLabel;
+        private System.Windows.Forms.TextBox editTitleTBox;
+        private System.Windows.Forms.TextBox editSalaryTBox;
+        private System.Windows.Forms.TextBox editDynamicTBox;
+        private System.Windows.Forms.TextBox editPhoneNrTBox;
+        private System.Windows.Forms.TextBox editLastNameTBox;
+        private System.Windows.Forms.TextBox editFirstNameTBox;
+        private System.Windows.Forms.Button editCancelButton;
+        private System.Windows.Forms.Button editSaveButton;
     }
 }
 
